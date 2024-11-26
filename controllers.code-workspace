@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../controllers"
+		},
+		{
+			"path": "../interfaces"
+		},
+		{
+			"path": "../middlewares"
+		},
+		{
+			"path": "../models"
+		},
+		{
+			"path": "../routes"
+		},
+		{
+			"path": "."
+		}
+	]
+}

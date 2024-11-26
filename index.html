@@ -1,0 +1,8 @@
+<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+<script>
+  const socket = io("http://localhost:3000/api/v1/ph");
+  socket.on("phUpdate", (data) => {
+    console.log("Dato de pH en tiempo real:", data);
+    document.getElementById("phValue").innerText = `Nivel de pH: ${data.level}`;
+  });
+</script>
