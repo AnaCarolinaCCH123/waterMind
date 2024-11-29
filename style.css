@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #001b48;
+  padding-top: 15px;
+  padding-left: 40px;
+  padding-bottom: 15px;
+}
+
+footer {
+  background-color: #001b48;
+  padding-top: 15px;
+  padding-left: 40px;
+  padding-bottom: 15px;
+}
+
+body {
+  background-image: url("Fondo.png");
+  background-size: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.container {
+  width: 66%;
+  position: relative;
+  top: 50px;
+  left: 100px;
+  box-shadow:
+    10px,
+    25px,
+    28px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.img-container {
+  width: 100%;
+  display: flex;
+  animation: slide 20s infinite;
+}
+
+img {
+  width: 100%;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+}
+
+.button {
+  border: none;
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #018abe;
+  border-radius: 40px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  55% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

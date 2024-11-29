@@ -1,8 +1,138 @@
-<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
-<script>
-  const socket = io("http://localhost:3000/api/v1/ph");
-  socket.on("phUpdate", (data) => {
-    console.log("Dato de pH en tiempo real:", data);
-    document.getElementById("phValue").innerText = `Nivel de pH: ${data.level}`;
-  });
-</script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Water Mind</title>
+  </head>
+  <body>
+    <header>
+      <table style="width: 100%">
+        <td style="width: 50%">
+          <img src="Logo1.png" style="width: 10%" />
+        </td>
+        <td style="width: 8%">
+          <a href="Login.html" style="color: aliceblue; font-size: 20px"
+            >Iniciar <br />Sesión</a
+          >
+        </td>
+        <td style="width: 6%">
+          <a href="#Nosotros" style="color: aliceblue; font-size: 20px"
+            >Nosotros</a
+          >
+        </td>
+        <td style="width: 5%">
+          <a href="#Misión" style="color: aliceblue; font-size: 20px">Misión</a>
+        </td>
+        <td style="width: 5%">
+          <a href="datos.html" style="color: aliceblue; font-size: 20px"
+            >Datos</a
+          >
+        </td>
+      </table>
+    </header>
+    <div>
+      <div class="float-child">
+        <div class="container">
+          <div class="img-container">
+            <img src="Carrusel1.png" />
+            <img src="Carrusel2.png" />
+            <img src="Carrusel3.png" />
+          </div>
+        </div>
+      </div>
+      <div class="float-child" style="padding-right: 100px">
+        <br /><br /><br />
+        <table>
+          <td style="width: 40%">
+            <img src="Logo.png" style="width: 200px" />
+          </td>
+          <td style="font-size: 140px">Water Mind</td>
+        </table>
+      </div>
+    </div>
+    <div style="padding: 50px">
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <p style="font-size: 30px; text-align: center">
+        El océano es el latido azul de nuestro planeta, esencial para la vida de
+        todos. Sus aguas son como los pulmones de la Tierra, produciendo la
+        mayor parte del oxígeno que respiramos. Regula el clima, manteniendo la
+        temperatura del mundo estable y suave. Sin el océano, el mundo sería un
+        lugar seco y desolado. Es hogar de millones de criaturas, desde las más
+        pequeñas hasta las más grandes, todas formando una red de vida que
+        también nos sostiene a nosotros.
+      </p>
+      <br /><br /><br /><br /><br />
+      <table>
+        <td style="width: 60%; font-size: 90px">
+          ¿Qué es la acidificación de los océanos?<br />
+          <p style="font-size: 30px">
+            <br />
+            La acidificación de los océanos es un proceso en el que las aguas
+            marinas se vuelven más ácidas debido al aumento de dióxido de
+            carbono (CO₂) en la atmósfera
+          </p>
+        </td>
+        <td><img style="width: 80%; padding-left: 30px" src="CO2.png" /></td>
+      </table>
+    </div>
+    <div id="Nosotros" style="padding: 50px">
+      <table style="text-align: center">
+        <td style="text-align: center; padding-right: 50px">
+          <img style="width: 625px" src="Galeria.png" />
+        </td>
+        <td style="font-size: 75px; width: 40%; text-align: center">
+          Nosotros<br />
+          <p style="font-size: 25px">
+            <br />
+            Somos tres chicas estudiantes del área de tecnologías (robótica y
+            programación) que se interesan por el cuidado del medio ambiente y
+            buscan que la misión del proyecto llegue a más personas.<br /><br />¿Te
+            interesa obtener nuestras noticias?<br /><br />
+            <button
+              class="button"
+              onclick="location.href = 'Suscribete.html';"
+              id="myButton"
+              class="float-left submit-button"
+            >
+              Regístrate Aquí
+            </button>
+          </p>
+        </td>
+      </table>
+    </div>
+    <div id="Misión" style="text-align: center; padding: 50px; font-size: 90px">
+      Misión
+      <p style="font-size: 30px">
+        <br />
+        Nuestro proyecto tiene como misión crear consciencia en las nuevas
+        generaciones de la contamianción marina, específicamente la
+        acidificación de los océanos con un sensor de pH duradero que
+        constantemente transmitirá datos en tiempo real a nuestra página, con el
+        fin de observar cuánto daño le hacemos a nuestro planeta.<br />
+        <img style="width: 60%" src="Oceanos.png" />
+      </p>
+      <br />
+      ODS Relacionados<br /><br />
+      <div class="float-child">
+        <img style="width: 400px" src="ODS6.png" />
+      </div>
+      <div class="float-child">
+        <br /><br />
+        <img style="width: 400px" src="ODS14.png" />
+      </div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <footer>
+      <table style="width: 100%">
+        <td style="width: 80%">
+          <img src="Logo1.png" style="width: 10%" />
+        </td>
+        <td style="color: aliceblue; font-size: 20px">
+          <p>Contáctanos</p><br /><br /><a href="https://www.instagram.com/water.mind.itsem/">Instagram</p><br /><br /><p>Facebook</p>
+        </td>
+      </table>
+    </footer>
+  </body>
+</html>
